@@ -160,13 +160,13 @@ class Attr67AddWindow(ui.ScriptWindow):
     def SelectItemRegistSlot(self, slot_index):
         if mouseModule.mouseController.isAttached():
             return
+        
+        mouseModule.mouseController.DeattachObject()
 
         if self.pop and self.pop.IsShow():
             return
 
         self.__ClearData()
-
-        mouseModule.mouseController.DeattachObject()
 
     def SelectEmptyRegistSlot(self, slot_index):
         if not mouseModule.mouseController.isAttached():
@@ -209,14 +209,14 @@ class Attr67AddWindow(ui.ScriptWindow):
     def SelectItemSupportSlot(self, slot_index):
         if mouseModule.mouseController.isAttached():
             return
+        
+        mouseModule.mouseController.DeattachObject()
 
         if self.pop and self.pop.IsShow():
             return
 
         self.__ClearSupportSlot()
         self.__CalculateTotalSuccessPer()
-
-        mouseModule.mouseController.DeattachObject()
 
     def SelectEmptySupportSlot(self, slot_index):
         if not mouseModule.mouseController.isAttached():
