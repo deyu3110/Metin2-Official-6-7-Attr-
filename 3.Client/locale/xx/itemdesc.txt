@@ -1,0 +1,21 @@
+39067	Powershard Chest	With a bit of luck this chest may contain a Powershard of a random colour.
+39068	Elegant Powershard Chest	Contains a skill book or with a bit of luck a powershard of a random colour. The chance to get a powershard is greater than with a regular Powershard Chest.
+39069	Lucent Powershard Chest	Contains 5 lucent powershards in a random colour.
+39070	Grey Powershard	A raw material which provides a certain chance of adding a 6th or 7th bonus. Item level: 0-29
+39071	White Powershard	A raw material which provides a certain chance of adding a 6th or 7th bonus. Item level: 31-39
+39072	Green Powershard	A raw material which provides a certain chance of adding a 6th or 7th bonus. Item level: 40-49
+39073	Yellow Powershard	A raw material which provides a certain chance of adding a 6th or 7th bonus. Item level: 50-59
+39074	Blue Powershard	A raw material which provides a certain chance of adding a 6th or 7th bonus. Item level: 60-74
+39075	Purple Powershard	A raw material which provides a certain chance of adding a 6th or 7th bonus. Item level: 76-89
+39076	Red Powershard	A raw material which provides a certain chance of adding a 6th or 7th bonus. Item level: 90-104
+39077	Rainbow Powershard	A raw material which provides a certain chance of adding a 6th or 7th bonus. Item level: 106-120
+39078	Lucent Grey Powershard	A rare material which provides a certain chance of adding a 6th or 7th bonus. Can only be found on bosses. Item level: 30
+39079	Lucent Green Powershard	A rare material which provides a certain chance of adding a 6th or 7th bonus. Can only be found on bosses. Item level: 75
+39080	Lucent Yellow Powershard	A rare material which provides a certain chance of adding a 6th or 7th bonus. Can only be found on bosses. Item level: 105
+39081	Holy Powershard (120)	A raw material which provides a certain chance of adding a 6th or 7th bonus. Item level: 120-150 (Champion Level 1-30)
+72064	Small Additive	Increases the chance of adding a bonus by up to 5%. Required for maximum increase: | 5x Small Additive | 10x Powershard
+72065	Medium Additive	Increases the chance of adding a bonus by up to 10%. Required for maximum increase: | 5x Medium Additive | 10x Powershard
+72066	Large Additive	Increases the chance of adding a bonus by up to 20%. Required for maximum increase: | 5x Large Additive | 10x Powershard
+72067	Power Additive	Increases the chance of adding a bonus by up to 50%. Required for maximum increase: | 5x Power Additive | 10x Powershard
+72346	Orison	Removes the bonuses from one of your items and adds new ones. Only applies to bonuses 6 and 7.
+72351	Small Orison	Provides a small chance to change a 6th or 7th bonus.

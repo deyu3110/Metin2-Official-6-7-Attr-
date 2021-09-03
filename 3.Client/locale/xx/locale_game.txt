@@ -1,0 +1,9 @@
+ATTR_6TH_7TH_ADD_QUESTION1	You cannot use this item while a bonus is being added.
+ATTR_6TH_7TH_ADD_QUESTION2	Do you really want to add the bonus?
+ATTR_6TH_7TH_CHANGE_FAIL	You cannot change the bonus.
+ATTR_6TH_7TH_DESC1	a. You must add the materials required for the item to add a 6th and 7th bonus.
+ATTR_6TH_7TH_DESC2	b. Each powershard increases the success rate by 2%.
+ATTR_6TH_7TH_DESC3	c. Use an additive to increase the success rate even further.
+ATTR_6TH_7TH_DESC4	d. It takes 24 hours to add a bonus. During this time, the NPC will keep the item onto which the bonus should be added. As soon as the process is complete, you can collect it again.
+ATTR_6TH_7TH_POSSIBILITY	You can add an additional bonus.
+ATTR_6TH_7TH_TOTAL_SUCCESS_PERCENT	Success rate: %.1f%%

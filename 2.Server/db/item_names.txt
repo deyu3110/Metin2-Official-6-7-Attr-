@@ -1,0 +1,21 @@
+39067	Powershard Chest
+39068	Elegant Powershard Chest
+39069	Lucent Powershard Chest
+39070	Grey Powershard
+39071	White Powershard
+39072	Green Powershard
+39073	Yellow Powershard
+39074	Blue Powershard
+39075	Purple Powershard
+39076	Red Powershard
+39077	Rainbow Powershard
+39078	Lucent Grey Powershard
+39079	Lucent Green Powershard
+39080	Lucent Yellow Powershard
+39081	Holy Powershard (120)
+72064	Small Additive
+72065	Medium Additive
+72066	Large Additive
+72067	Power Additive
+72346	Orison
+72351	Small Orison
