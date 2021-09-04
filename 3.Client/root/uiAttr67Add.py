@@ -42,6 +42,8 @@ class Attr67AddWindow(ui.ScriptWindow):
         self.MaterialSlotIndex = -1
         self.SupportSlotIndex = -1
         self.RegistSlotIndex = -1
+        self.inven = None
+        self.interface = None
 
     def __del__(self):
         super(Attr67AddWindow, self).__del__()
@@ -58,6 +60,8 @@ class Attr67AddWindow(ui.ScriptWindow):
         self.MaterialSlotIndex = -1
         self.SupportSlotIndex = -1
         self.RegistSlotIndex = -1
+        self.inven = None
+        self.interface = None
 
     def __LoadWindow(self):
         if self.isLoaded:
@@ -449,8 +453,9 @@ class Attr67AddWindow(ui.ScriptWindow):
         net.Send67AttrClosePacket()
 
         if app.WJ_ENABLE_TRADABLE_ICON:
-            self.interface.SetOnTopWindow(player.ON_TOP_WND_NONE)
-            self.interface.RefreshMarkInventoryBag()
+            if self.interface:
+                self.interface.SetOnTopWindow(player.ON_TOP_WND_NONE)
+                self.interface.RefreshMarkInventoryBag()
 
     def OnPressEscapeKey(self):
         self.Close()
@@ -467,21 +472,20 @@ class Attr67AddWindow(ui.ScriptWindow):
             return dstItemVNum in Attr67AddWindow.SUPPORT_DICT
         
         def RefreshLockedSlot(self):
-            if self.inven == None:
-                return
-
-            for i in range(player.INVENTORY_PAGE_SIZE):
-                self.inven.wndItem.SetCanMouseEventSlot(i)
-            
-            for i in (self.SupportSlotIndex, self.RegistSlotIndex):
-                if i != -1:
-                    itemInvenPage = i / player.INVENTORY_PAGE_SIZE
-                    localSlotPos = i - (itemInvenPage * player.INVENTORY_PAGE_SIZE)
-                    if self.inven.GetInventoryPageIndex() == itemInvenPage:
-                        self.inven.wndItem.SetCantMouseEventSlot(localSlotPos)
-                        
-            self.inven.wndItem.RefreshSlot()
-            self.inven.RefreshMarkSlots()
+            if self.inven:
+                if self.inven.wndItem:
+                    for i in range(player.INVENTORY_PAGE_SIZE):
+                        self.inven.wndItem.SetCanMouseEventSlot(i)
+                    
+                    for i in (self.SupportSlotIndex, self.RegistSlotIndex):
+                        if i != -1:
+                            itemInvenPage = i / player.INVENTORY_PAGE_SIZE
+                            localSlotPos = i - (itemInvenPage * player.INVENTORY_PAGE_SIZE)
+                            if self.inven.GetInventoryPageIndex() == itemInvenPage:
+                                self.inven.wndItem.SetCantMouseEventSlot(localSlotPos)
+                            
+                    self.inven.wndItem.RefreshSlot()
+                self.inven.RefreshMarkSlots()
         
         def BindInterface(self, interface):
             from _weakref import proxy
@@ -495,6 +499,7 @@ class Attr67AddWindow(ui.ScriptWindow):
             if self.tooltipitem:
                 self.tooltipitem.SetTop()
 
-            if app.WJ_ENABLE_TRADABLE_ICON and self.interface:
-                self.interface.SetOnTopWindow(player.ON_TOP_WND_ATTR_67)
-                self.interface.RefreshMarkInventoryBag()
+            if app.WJ_ENABLE_TRADABLE_ICON:
+                if self.interface:
+                    self.interface.SetOnTopWindow(player.ON_TOP_WND_ATTR_67)
+                    self.interface.RefreshMarkInventoryBag()
